@@ -74,7 +74,7 @@ model = dict(
         flip_mode='heatmap',
         shift_heatmap=True,
     ),
-    init_cfg=dict(type='Pretrained', checkpoint='/home/browatbn/dev/csl/animal_pose/work_dirs/distill_res50_ap10k-256x256/epoch_140.pth'),
+    init_cfg=dict(type='Pretrained', checkpoint='./work_dirs/distill_res50_ap10k-256x256/epoch_140.pth'),
 )
 
 # base dataset settings

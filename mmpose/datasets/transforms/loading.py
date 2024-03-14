@@ -85,7 +85,7 @@ def load_dino_hdf5(filepath: str) -> h5py.File:
 @TRANSFORMS.register_module()
 class LoadDino(BaseTransform):
 
-    def __init__(self, dino_file="/home/browatbn/dev/data/dino/dino_train-split1_vits14_14.h5") -> None:
+    def __init__(self, dino_file="./data/dino/dino_train-split1_vits14_14.h5") -> None:
         self.dino_file = dino_file
         assert osp.isfile(self.dino_file), f"Could not find DINO feature file {self.dino_file}"
         self.attentions = load_dino_hdf5(self.dino_file)

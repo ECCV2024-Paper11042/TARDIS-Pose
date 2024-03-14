@@ -349,12 +349,11 @@ if __name__ == '__main__':
     dataset_name = 'ap10k'
     split = 'train-split1'
 
-    ap10k_root = './datasets/animal_data/ap-10k'
+    ap10k_root = os.path.join(os.getcwd(), 'datasets/animal_data/ap-10k')
     ap10k_meta_file = './mmpose/datasets/datasets/animal/ap10k/ap10k.py'
 
     dataset = AP10KDataset(
-        # ann_file=os.path.join(ap10k_root, f"annotations/ap10k-{split}.json"),
-        ann_file=f"/home/browatbn/dev/datasets/animal_data/ap-10k/annotations/ap10k-{split}.json",
+        ann_file=os.path.join(ap10k_root, f"annotations/ap10k-{split}.json"),
         data_root=os.path.join(ap10k_root, "data"),
         metainfo=dict(from_file=ap10k_meta_file),
         pipeline=[

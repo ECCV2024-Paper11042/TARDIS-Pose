@@ -104,14 +104,14 @@ model = dict(
         flip_mode='heatmap',
         shift_heatmap=True,
     ),
-    init_cfg=dict(type='Pretrained', checkpoint='/home/browatbn/dev/csl/animal_pose/work_dirs/distill_hrnet_ap10k-256x256/epoch_200.pth'),
+    init_cfg=dict(type='Pretrained', checkpoint='./work_dirs/distill_hrnet_ap10k-256x256/epoch_200.pth'),
 )
 
 
 # base dataset settings
 dataset_type = 'AP10KDataset'
 data_mode = 'topdown'
-data_root = '/home/browatbn/dev/datasets/animal_data/ap-10k/'
+data_root = './datasets/animal_data/ap-10k/'
 
 pixel_augmentations = dict(
     type='Albumentation',
