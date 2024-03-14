@@ -1,5 +1,7 @@
 # TARDIS-Pose: Targeted Distillation of Self-Supervised ViT features for Animal Pose Estimation 
 
+![Teaser](teaser.png) 
+
 ## Requirements
 
 - Linux (not tested on other platforms)
@@ -58,7 +60,7 @@ python scripts/train.py configs/animal_2d_keypoint/dinopose/ap10k/distill_res50_
 Models and logs will be saved to ./work_dirs.
 
 
-### Training keypoint detection
+### Train keypoint detection
 
 Update path to distilled model in config file if necessary.
 
@@ -68,12 +70,12 @@ Train fully supervised:
 python scripts/train.py configs/animal_2d_keypoint/dinopose/ap10k/supervised_distill_hrnet_ap10k-256x256.py 
 ```
 
-Train few-show <n_imgs>:
+Train few-shot <n_imgs>:
 ```
 python scripts/train.py configs/animal_2d_keypoint/dinopose/ap10k/fewshot<n_imgs>_distill_hrnet_ap10k-256x256.py 
 ```
 
-For example, to train an HRNet on AP-10K with 5 labels per animal:
+For example, to train an HRNet on AP-10K with 5 labeled images per animal:
 ```
 python scripts/train.py configs/animal_2d_keypoint/dinopose/ap10k/fewshot05_distill_hrnet_ap10k-256x256.py 
 ```
